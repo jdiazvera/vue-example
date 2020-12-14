@@ -1,2 +1,4 @@
 FROM node:lts-alpine
-RUN yarn global add @vue/cli
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
